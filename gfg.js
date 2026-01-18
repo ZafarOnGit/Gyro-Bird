@@ -30,11 +30,11 @@ let topPipeImg;
 let bottomPipeImg;
 
 //physics
-let baseVelocityX = -4; //base pipes moving left speed (increased from -2)
+let baseVelocityX = -2; //base pipes moving left speed 
 let velocityX = baseVelocityX; //current velocity
 let velocityY = 0; //bird jump speed
-let gravity = 0.4;
-let jumpStrength = -6;
+let gravity = 0.3;
+let jumpStrength = -8;
 
 let gameOver = false;
 let score = 0;
@@ -256,4 +256,5 @@ function detectCollision(a, b) {
            a.x + a.width > b.x &&   //a's top right corner passes b's top left corner
            a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
            a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
+
 }
